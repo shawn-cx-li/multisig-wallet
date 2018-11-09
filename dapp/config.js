@@ -176,6 +176,8 @@ function checkWalletFactoryAddress() {
 function loadConfiguration () {
   var userConfig = JSON.parse(localStorage.getItem("userConfig"));
   Object.assign(txDefault, txDefaultOrig, userConfig);
+
+  if (!txDefault.defaultChainID) txDefault.defaultChainID = 3;
 }
 
 checkWalletFactoryAddress();
