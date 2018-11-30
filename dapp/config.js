@@ -106,26 +106,32 @@ if (isElectron) {
 }
 
 var txDefault = {
-  ethereumNodes : [
+  defaultChainID: 1,
+  ethereumNodes: [
     {
       url : "https://mainnet.infura.io:443",
-      name: "Remote Mainnet"
+      name: "Remote Mainnet",
+      chainId: "1"
     },
     {
       url : "https://ropsten.infura.io:443",
-      name: "Remote Ropsten"
-    },
-    {
-      url : "https://kovan.infura.io:443",
-      name: "Remote Kovan"
+      name: "Remote Ropsten",
+      chainId: "3"
     },
     {
       url : "https://rinkeby.infura.io:443",
-      name: "Remote Rinkeby"
+      name: "Remote Rinkeby",
+      chainId: "4"
+    },
+    {
+      url : "https://kovan.infura.io:443",
+      name: "Remote Kovan",
+      chainId: "42"
     },
     {
       url : "http://localhost:8545",
-      name: "Local node"
+      name: "Local node",
+      chainId: "88"
     }
   ],
   walletFactoryAddresses: {
@@ -176,8 +182,6 @@ function checkWalletFactoryAddress() {
 function loadConfiguration () {
   var userConfig = JSON.parse(localStorage.getItem("userConfig"));
   Object.assign(txDefault, txDefaultOrig, userConfig);
-
-  if (!txDefault.defaultChainID) txDefault.defaultChainID = 3;
 }
 
 checkWalletFactoryAddress();

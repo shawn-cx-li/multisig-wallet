@@ -26,6 +26,7 @@
           var item = $scope.config.ethereumNodes[x];
 
           if (item.url == $scope.config.ethereumNode) {
+            $scope.config.defaultChainID = item.chainId;
             $scope.config.selectedEthereumNode.name = item.name;
             break;
           }
