@@ -1,0 +1,581 @@
+var tokens = [{
+  "address": "0xb98d4c97425d9908e66e53a6fdf673acca0be986",
+  "name": "ABT",
+  "symbol": "ABT",
+  "decimal": 18
+}, {
+  "address": "0x4470BB87d77b963A013DB939BE332f927f2b992e",
+  "name": "ADX",
+  "symbol": "ADX",
+  "decimal": 4
+}, {
+  "address": "0x5ca9a71b1d01849c0a95490cc00559717fcf0d1d",
+  "name": "AE",
+  "symbol": "AE",
+  "decimal": 18
+}, {
+  "address": "0x8eB24319393716668D768dCEC29356ae9CfFe285",
+  "name": "AGI",
+  "symbol": "AGI",
+  "decimal": 8
+}, {
+  "address": "0x4CEdA7906a5Ed2179785Cd3A40A69ee8bc99C466",
+  "name": "AION",
+  "symbol": "AION",
+  "decimal": 8
+}, {
+  "address": "0x4dc3643dbc642b72c158e7f3d2ff232df61cb6ce",
+  "name": "AMB",
+  "symbol": "AMB",
+  "decimal": 18
+}, {
+  "address": "0x960b236A07cf122663c4303350609A66A7B288C0",
+  "name": "ANT",
+  "symbol": "ANT",
+  "decimal": 18
+}, {
+  "address": "0x27054b13b1B798B345b591a4d22e6562d47eA75a",
+  "name": "AST",
+  "symbol": "AST",
+  "decimal": 4
+}, {
+  "address": "0x0D8775F648430679A709E98d2b0Cb6250d2887EF",
+  "name": "BAT",
+  "symbol": "BAT",
+  "decimal": 18
+}, {
+  "address": "0x5732046A883704404F284Ce41FfADd5b007FD668",
+  "name": "BLZ",
+  "symbol": "BLZ",
+  "decimal": 18
+}, {
+  "address": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
+  "name": "BNT",
+  "symbol": "BNT",
+  "decimal": 18
+}, {
+  "address": "0x558ec3152e2eb2174905cd19aea4e34a23de9ad6",
+  "name": "BRD",
+  "symbol": "BRD",
+  "decimal": 18
+}, {
+  "address": "0xcb97e65f07da24d46bcdd078ebebd7c6e6e3d750",
+  "name": "BTM",
+  "symbol": "BTM",
+  "decimal": 8
+}, {
+  "address": "0x26E75307Fc0C021472fEb8F727839531F112f317",
+  "name": "C20",
+  "symbol": "C20",
+  "decimal": 18
+}, {
+  "address": "0x1d462414fe14cf489c7A21CaC78509f4bF8CD7c0",
+  "name": "CAN",
+  "symbol": "CAN",
+  "decimal": 6
+}, {
+  "address": "0xf85fEea2FdD81d51177F6b8F35F0e6734Ce45F5F",
+  "name": "CMT",
+  "symbol": "CMT",
+  "decimal": 18
+}, {
+  "address": "0xd4c435f5b09f855c3317c8524cb1f586e42795fa",
+  "name": "CND",
+  "symbol": "CND",
+  "decimal": 18
+}, {
+  "address": "0x80a7e048f37a50500351c204cb407766fa3bae7f",
+  "name": "CRPT",
+  "symbol": "CRPT",
+  "decimal": 18
+}, {
+  "address": "0xea11755ae41d889ceec39a63e6ff75a02bc1c00d",
+  "name": "CTXC",
+  "symbol": "CTXC",
+  "decimal": 18
+}, {
+  "address": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
+  "name": "CVC",
+  "symbol": "CVC",
+  "decimal": 8
+}, {
+  "address": "0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359",
+  "name": "DAI",
+  "symbol": "DAI",
+  "decimal": 18
+}, {
+  "address": "0x08d32b0da63e2C3bcF8019c9c5d849d7a9d791e6",
+  "name": "DCN",
+  "symbol": "DCN",
+  "decimal": 0
+}, {
+  "address": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
+  "name": "DENT",
+  "symbol": "DENT",
+  "decimal": 8
+}, {
+  "address": "0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A",
+  "name": "DGD",
+  "symbol": "DGD",
+  "decimal": 9
+}, {
+  "address": "0x0abdace70d3790235af448c88547603b945604ea",
+  "name": "DNT",
+  "symbol": "DNT",
+  "decimal": 18
+}, {
+  "address": "0x419c4db4b9e25d6db2ad9691ccb832c8d9fda05e",
+  "name": "DRGN",
+  "symbol": "DRGN",
+  "decimal": 18
+}, {
+  "address": "0x4672bad527107471cb5067a887f4656d585a8a31",
+  "name": "DROP",
+  "symbol": "DROP",
+  "decimal": 18
+}, {
+  "address": "0xd234bf2410a0009df9c3c63b610c09738f18ccd7",
+  "name": "DTR",
+  "symbol": "DTR",
+  "decimal": 8
+}, {
+  "address": "0x08711D3B02C8758F2FB3ab4e80228418a7F8e39c",
+  "name": "EDG",
+  "symbol": "EDG",
+  "decimal": 0
+}, {
+  "address": "0xced4e93198734ddaff8492d525bd258d49eb388e",
+  "name": "EDO",
+  "symbol": "EDO",
+  "decimal": 18
+}, {
+  "address": "0xf0ee6b27b759c9893ce4f094b49ad28fd15a23e4",
+  "name": "ENG",
+  "symbol": "ENG",
+  "decimal": 8
+}, {
+  "address": "0xF629cBd94d3791C9250152BD8dfBDF380E2a3B9c",
+  "name": "ENJ",
+  "symbol": "ENJ",
+  "decimal": 18
+}, {
+  "address": "0xd780Ae2Bf04cD96E577D3D014762f831d97129d0",
+  "name": "EVN",
+  "symbol": "EVN",
+  "decimal": 18
+}, {
+  "address": "0xe6f74dcfa0e20883008d8c16b6d9a329189d0c30",
+  "name": "FTC",
+  "symbol": "FTC",
+  "decimal": 2
+}, {
+  "address": "0xEA38eAa3C86c8F9B751533Ba2E562deb9acDED40",
+  "name": "FUEL",
+  "symbol": "FUEL",
+  "decimal": 18
+}, {
+  "address": "0x419D0d8BdD9aF5e606Ae2232ed285Aff190E711b",
+  "name": "FUN",
+  "symbol": "FUN",
+  "decimal": 8
+}, {
+  "address": "0x6810e776880C02933D47DB1b9fc05908e5386b96",
+  "name": "GNO",
+  "symbol": "GNO",
+  "decimal": 18
+}, {
+  "address": "0xa74476443119A942dE498590Fe1f2454d7D4aC0d",
+  "name": "GNT",
+  "symbol": "GNT",
+  "decimal": 18
+}, {
+  "address": "0xB70835D7822eBB9426B56543E391846C107bd32C",
+  "name": "GTC",
+  "symbol": "GTC",
+  "decimal": 18
+}, {
+  "address": "0xc5bbae50781be1669306b9e001eff57a2957b09d",
+  "name": "GTO",
+  "symbol": "GTO",
+  "decimal": 5
+}, {
+  "address": "0x103c3A209da59d3E7C4A89307e66521e081CFDF0",
+  "name": "GVT",
+  "symbol": "GVT",
+  "decimal": 18
+}, {
+  "address": "0xc011a72400e58ecd99ee497cf89e3775d4bd732f",
+  "name": "HAV",
+  "symbol": "HAV",
+  "decimal": 18
+}, {
+  "address": "0x554C20B7c486beeE439277b4540A434566dC4C02",
+  "name": "HST",
+  "symbol": "HST",
+  "decimal": 18
+}, {
+  "address": "0x888666CA69E0f178DED6D75b5726Cee99A87D698",
+  "name": "ICN",
+  "symbol": "ICN",
+  "decimal": 18
+}, {
+  "address": "0xb5a5f22694352c15b00323844ad545abb2b11028",
+  "name": "ICX",
+  "symbol": "ICX",
+  "decimal": 18
+}, {
+  "address": "0xFA1a856Cfa3409CFa145Fa4e20Eb270dF3EB21ab",
+  "name": "IOST",
+  "symbol": "IOST",
+  "decimal": 18
+}, {
+  "address": "0x5e6b6d9abad9093fdc861ea1600eba1b355cd940",
+  "name": "ITC",
+  "symbol": "ITC",
+  "decimal": 18
+}, {
+  "address": "0xa5Fd1A791C4dfcaacC963D4F73c6Ae5824149eA7",
+  "name": "JNT",
+  "symbol": "JNT",
+  "decimal": 18
+}, {
+  "address": "0x27695E09149AdC738A978e9A678F99E4c39e9eb9",
+  "name": "KICK",
+  "symbol": "KICK",
+  "decimal": 8
+}, {
+  "address": "0x818Fc6C2Ec5986bc6E2CBf00939d90556aB12ce5",
+  "name": "KIN",
+  "symbol": "KIN",
+  "decimal": 18
+}, {
+  "address": "0xdd974D5C2e2928deA5F71b9825b8b646686BD200",
+  "name": "KNC",
+  "symbol": "KNC",
+  "decimal": 18
+}, {
+  "address": "0x80fB784B7eD66730e8b1DBd9820aFD29931aab03",
+  "name": "LEND",
+  "symbol": "LEND",
+  "decimal": 18
+}, {
+  "address": "0x123ab195dd38b1b40510d467a6a359b201af056f",
+  "name": "LGO",
+  "symbol": "LGO",
+  "decimal": 8
+}, {
+  "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+  "name": "LINK",
+  "symbol": "LINK",
+  "decimal": 18
+}, {
+  "address": "0xa4e8c3ec456107ea67d3075bf9e3df3a75823db0",
+  "name": "LOOM",
+  "symbol": "LOOM",
+  "decimal": 18
+}, {
+  "address": "0xEF68e7C694F40c8202821eDF525dE3782458639f",
+  "name": "LRC",
+  "symbol": "LRC",
+  "decimal": 18
+}, {
+  "address": "0xe25bCec5D3801cE3a794079BF94adF1B8cCD802D",
+  "name": "MAN",
+  "symbol": "MAN",
+  "decimal": 18
+}, {
+  "address": "0x0F5D2fB29fb7d3CFeE444a200298f468908cC942",
+  "name": "MANA",
+  "symbol": "MANA",
+  "decimal": 18
+}, {
+  "address": "0xB63B606Ac810a52cCa15e44bB630fd42D8d1d83d",
+  "name": "MCO",
+  "symbol": "MCO",
+  "decimal": 8
+}, {
+  "address": "0x40395044ac3c0c57051906da938b54bd6557f212",
+  "name": "MGO",
+  "symbol": "MGO",
+  "decimal": 8
+}, {
+  "address": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+  "name": "MKR",
+  "symbol": "MKR",
+  "decimal": 18
+}, {
+  "address": "0x957c30aB0426e0C93CD8241E2c60392d08c6aC8e",
+  "name": "MOD",
+  "symbol": "MOD",
+  "decimal": 0
+}, {
+  "address": "0x905E337c6c8645263D3521205Aa37bf4d034e745",
+  "name": "MTC",
+  "symbol": "MTC",
+  "decimal": 18
+}, {
+  "address": "0xF433089366899D83a9f26A773D59ec7eCF30355e",
+  "name": "MTL",
+  "symbol": "MTL",
+  "decimal": 8
+}, {
+  "address": "0x809826cceab68c387726af962713b64cb5cb3cca",
+  "name": "NCASH",
+  "symbol": "NCASH",
+  "decimal": 18
+}, {
+  "address": "0x72dd4b6bd852a3aa172be4d6c5a6dbec588cf131",
+  "name": "NGC",
+  "symbol": "NGC",
+  "decimal": 18
+}, {
+  "address": "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07",
+  "name": "OMG",
+  "symbol": "OMG",
+  "decimal": 18
+}, {
+  "address": "0x2C4e8f2D746113d0696cE89B35F0d8bF88E0AEcA",
+  "name": "OST",
+  "symbol": "OST",
+  "decimal": 18
+}, {
+  "address": "0xB97048628DB6B661D4C2aA833e95Dbe1A905B280",
+  "name": "PAY",
+  "symbol": "PAY",
+  "decimal": 18
+}, {
+  "address": "0xe3818504c1B32bF1557b16C238B2E01Fd3149C17",
+  "name": "PLR",
+  "symbol": "PLR",
+  "decimal": 18
+}, {
+  "address": "0x0e0989b1f9b8a38983c2ba8053269ca62ec9b195",
+  "name": "POE",
+  "symbol": "POE",
+  "decimal": 8
+}, {
+  "address": "0x9992eC3cF6A55b00978cdDF2b27BC6882d88D1eC",
+  "name": "POLY",
+  "symbol": "POLY",
+  "decimal": 18
+}, {
+  "address": "0x595832f8fc6bf59c85c527fec3740a1b7a361269",
+  "name": "POWR",
+  "symbol": "POWR",
+  "decimal": 6
+}, {
+  "address": "0xc42209accc14029c1012fb5680d95fbd6036e2a0",
+  "name": "PPP",
+  "symbol": "PPP",
+  "decimal": 18
+}, {
+  "address": "0xd4fa1460F537bb9085d22C7bcCB5DD450Ef28e3a",
+  "name": "PPT",
+  "symbol": "PPT",
+  "decimal": 8
+}, {
+  "address": "0x88a3e4f35d64aad41a6d4030ac9afe4356cb84fa",
+  "name": "PRE",
+  "symbol": "PRE",
+  "decimal": 18
+}, {
+  "address": "0x618e75ac90b12c6049ba3b27f5d5f8651b0037f6",
+  "name": "QASH",
+  "symbol": "QASH",
+  "decimal": 6
+}, {
+  "address": "0x697beac28B09E122C4332D163985e8a73121b97F",
+  "name": "QRL",
+  "symbol": "QRL",
+  "decimal": 8
+}, {
+  "address": "0x99ea4dB9EE77ACD40B119BD1dC4E33e1C070b80d",
+  "name": "QSP",
+  "symbol": "QSP",
+  "decimal": 18
+}, {
+  "address": "0x9a642d6b3368ddc662CA244bAdf32cDA716005BC",
+  "name": "QTUM",
+  "symbol": "QTUM",
+  "decimal": 18
+}, {
+  "address": "0xf970b8e36e23f7fc3fd752eea86f8be8d83375a6",
+  "name": "RCN",
+  "symbol": "RCN",
+  "decimal": 18
+}, {
+  "address": "0x255aa6df07540cb5d3d297f0d0d4d84cb52bc8e6",
+  "name": "RDN",
+  "symbol": "RDN",
+  "decimal": 18
+}, {
+  "address": "0x408e41876cCCDC0F92210600ef50372656052a38",
+  "name": "REN",
+  "symbol": "REN",
+  "decimal": 18
+}, {
+  "address": "0x1985365e9f78359a9B6AD760e32412f4a445E862",
+  "name": "REP",
+  "symbol": "REP",
+  "decimal": 18
+}, {
+  "address": "0x8f8221aFbB33998d8584A2B05749bA73c37a938a",
+  "name": "REQ",
+  "symbol": "REQ",
+  "decimal": 18
+}, {
+  "address": "0x607F4C5BB672230e8672085532f7e901544a7375",
+  "name": "RLC",
+  "symbol": "RLC",
+  "decimal": 9
+}, {
+  "address": "0x4156D3342D5c385a87D264F90653733592000581",
+  "name": "SALT",
+  "symbol": "SALT",
+  "decimal": 8
+}, {
+  "address": "0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098",
+  "name": "SAN",
+  "symbol": "SAN",
+  "decimal": 18
+}, {
+  "address": "0x6F6DEb5db0C4994A8283A01D6CFeEB27Fc3bBe9C",
+  "name": "SMART",
+  "symbol": "SMART",
+  "decimal": 0
+}, {
+  "address": "0x21f15966e07a10554c364b988e91dab01d32794a",
+  "name": "SMT",
+  "symbol": "SMT",
+  "decimal": 18
+}, {
+  "address": "0x983F6d60db79ea8cA4eB9968C6aFf8cfA04B3c63",
+  "name": "SNM",
+  "symbol": "SNM",
+  "decimal": 18
+}, {
+  "address": "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
+  "name": "SNT",
+  "symbol": "SNT",
+  "decimal": 18
+}, {
+  "address": "0x42d6622dece394b54999fbd73d108123806f6a18",
+  "name": "SPANK",
+  "symbol": "SPANK",
+  "decimal": 18
+}, {
+  "address": "0x68d57c9a1C35f63E2c83eE8e49A64e9d70528D25",
+  "name": "SRN",
+  "symbol": "SRN",
+  "decimal": 18
+}, {
+  "address": "0xB64ef51C888972c908CFacf59B47C1AfBC0Ab8aC",
+  "name": "STORJ",
+  "symbol": "STORJ",
+  "decimal": 8
+}, {
+  "address": "0xD0a4b8946Cb52f0661273bfbC6fD0E0C75Fc6433",
+  "name": "STORM",
+  "symbol": "STORM",
+  "decimal": 18
+}, {
+  "address": "0x5c3a228510d246b78a3765c20221cbf3082b44a4",
+  "name": "STQ",
+  "symbol": "STQ",
+  "decimal": 18
+}, {
+  "address": "0x12480E24eb5bec1a9D4369CaB6a80caD3c0A377A",
+  "name": "SUB",
+  "symbol": "SUB",
+  "decimal": 2
+}, {
+  "address": "0x9e88613418cf03dca54d6a2cf6ad934a78c7a17a",
+  "name": "SWM",
+  "symbol": "SWM",
+  "decimal": 18
+}, {
+  "address": "0x12b306fa98f4cbb8d4457fdff3a0a0a56f07ccdf",
+  "name": "SXDT",
+  "symbol": "SXDT",
+  "decimal": 18
+}, {
+  "address": "0x85e076361cc813a908ff672f9bad1541474402b2",
+  "name": "TEL",
+  "symbol": "TEL",
+  "decimal": 2
+}, {
+  "address": "0x80bc5512561c7f85a3a9508c7df7901b370fa1df",
+  "name": "TIO",
+  "symbol": "TIO",
+  "decimal": 18
+}, {
+  "address": "0xaAAf91D9b90dF800Df4F55c205fd6989c977E73a",
+  "name": "TKN",
+  "symbol": "TKN",
+  "decimal": 8
+}, {
+  "address": "0x08f5a9235b08173b7569f83645d2c7fb55e8ccd8",
+  "name": "TNT",
+  "symbol": "TNT",
+  "decimal": 8
+}, {
+  "address": "0xf230b790e05390fc8295f4d3f60332c93bed42e2",
+  "name": "TRX",
+  "symbol": "TRX",
+  "decimal": 6
+}, {
+  "address": "0x70a72833d6bf7f508c8224ce59ea1ef3d0ea3a38",
+  "name": "UTK",
+  "symbol": "UTK",
+  "decimal": 18
+}, {
+  "address": "0x340d2bde5eb28c1eed91b2f790723e3b160613b7",
+  "name": "VEE",
+  "symbol": "VEE",
+  "decimal": 18
+}, {
+  "address": "0xD850942eF8811f2A866692A623011bDE52a462C1",
+  "name": "VEN",
+  "symbol": "VEN",
+  "decimal": 18
+}, {
+  "address": "0x8f3470A7388c05eE4e7AF3d01D8C722b0FF52374",
+  "name": "VERI",
+  "symbol": "VERI",
+  "decimal": 18
+}, {
+  "address": "0x39Bb259F66E1C59d5ABEF88375979b4D20D98022",
+  "name": "WAX",
+  "symbol": "WAX",
+  "decimal": 8
+}, {
+  "address": "0x4CF488387F035FF08c371515562CBa712f9015d4",
+  "name": "WPR",
+  "symbol": "WPR",
+  "decimal": 18
+}, {
+  "address": "0xb7cb1c96db6b22b0d3d9536e0108d062bd488f74",
+  "name": "WTC",
+  "symbol": "WTC",
+  "decimal": 18
+}, {
+  "address": "0x05f4a42e251f2d52b8ed15E9FEdAacFcEF1FAD27",
+  "name": "ZIL",
+  "symbol": "ZIL",
+  "decimal": 12
+}, {
+  "address": "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
+  "name": "ZRX",
+  "symbol": "ZRX",
+  "decimal": 18
+}, {
+  "address": "0xF7920B0768Ecb20A123fAc32311d07D193381d6f",
+  "name": "TNB",
+  "symbol": "TNB",
+  "decimal": 18
+}, {
+  "address": "0xcb324e4c8c1561d547c38bd1d4a3b12a405b8019",
+  "name": "PVB",
+  "symbol": "PVB",
+  "decimal": 18
+}]
