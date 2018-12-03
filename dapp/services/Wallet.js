@@ -125,10 +125,11 @@
           value: ethereumjs.Util.intToHex(0),
           gasPrice: ethereumjs.Util.intToHex(wallet.txParams.gasPrice),
           gas: ethereumjs.Util.intToHex(wallet.txParams.gasLimit),
-          nonce: nonce?nonce:ethereumjs.Util.intToHex(wallet.txParams.nonce),
+          nonce: nonce?nonce:ethereumjs.Util.intToHex(wallet.txParams.nonce ? wallet.txParams.nonce : 0),
           data: data
         };
 
+        console.log(txInfo)
         Web3Service.web3.eth.signTransaction(txInfo, function(e, signed) {
           if (e) {
             cb(e);
