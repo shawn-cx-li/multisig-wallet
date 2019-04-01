@@ -2,7 +2,7 @@ require('dotenv').config()
 const PrivateKeyProvider = require("truffle-privatekey-provider");
 
 const deploymentProvider = () => {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === 'prod') {
     const privKey = process.env.MAINNET_DEPLOY_KEY
     return new PrivateKeyProvider(privKey, `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`)
   } else {
@@ -18,8 +18,7 @@ module.exports = {
   networks: {
     development: {
       provider: deploymentProvider(),
-      // provider: () => new PrivateKeyProvider(privKeyrinkeby, "https://ropsten.infura.io/v3/aef153ca537641078b3305d0f105d5ad"),
-      gasPrice: 10 ** 10, // 5 gwei,
+      gasPrice: 5 * 10 ** 9, // 5 gwei,
       gas: 4712388,
       network_id: "*",
     },
