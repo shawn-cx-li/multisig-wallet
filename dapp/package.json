@@ -66,6 +66,7 @@
     "browser-builds": "git+https://github.com/ethereumjs/browser-builds#ddb27f8d0f18f04333cccea7b5fef48eb609dd42",
     "browser-passworder": "2.0.3",
     "clipboard": "1.5.16",
+    "dotenv": "^7.0.0",
     "eth-hd-keyring": "1.2.0",
     "eth-lightwallet": "3.0.1",
     "eth-sig-util": "1.2.1",

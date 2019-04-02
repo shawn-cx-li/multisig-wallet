@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 var txDefaultOrig =
 {
   gasLimit: 3141592,
@@ -24,22 +26,22 @@ var txDefault = {
   defaultChainID: 3,
   ethereumNodes: [
     {
-      url : "https://mainnet.infura.io:443",
+      url : `https://mainnet.infura.io/v3/${process.env.INFRUA_KEY}`,
       name: "Remote Mainnet",
       chainId: "1"
     },
     {
-      url : "https://ropsten.infura.io:443",
+      url : `https://ropsten.infura.io/v3/${process.env.INFRUA_KEY}`,
       name: "Remote Ropsten",
       chainId: "3"
     },
     {
-      url : "https://rinkeby.infura.io:443",
+      url : `https://rinkeby.infura.io/v3/${process.env.INFRUA_KEY}`,
       name: "Remote Rinkeby",
       chainId: "4"
     },
     {
-      url : "https://kovan.infura.io:443",
+      url : `https://kovan.infura.io/v3/${process.env.INFRUA_KEY}`,
       name: "Remote Kovan",
       chainId: "42"
     },

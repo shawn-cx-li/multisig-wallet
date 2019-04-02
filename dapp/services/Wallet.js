@@ -129,7 +129,6 @@
           data: data
         };
 
-        console.log(txInfo)
         Web3Service.web3.eth.signTransaction(txInfo, function(e, signed) {
           if (e) {
             cb(e);
