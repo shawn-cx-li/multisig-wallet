@@ -5,7 +5,7 @@ const MultisigWalletWithoutDailyLimit = artifacts.require('MultiSigWallet.sol')
 const MultisigWalletFactory = artifacts.require('MultiSigWalletWithDailyLimitFactory.sol')
 
 module.exports = deployer => {
-  const deloyFrom = process.env.NODE_ENV === 'production' ? process.env.MAINNET_DEPLOY_ADDRESS : process.env.ROPSTEN_DEPLOY_ADDRESS
+  const deloyFrom = process.env.NODE_ENV === 'prod' ? process.env.MAINNET_DEPLOY_ADDRESS : process.env.ROPSTEN_DEPLOY_ADDRESS
   const args = process.argv.slice()
   
   // Deploy multisig wallet

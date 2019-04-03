@@ -26,22 +26,22 @@ var txDefault = {
   defaultChainID: 3,
   ethereumNodes: [
     {
-      url : `https://mainnet.infura.io/v3/${process.env.INFRUA_KEY}`,
+      url : `https://mainnet.infura.io/v3/624bfd9b2a084cd39ca8e1f50d79f56e`,
       name: "Remote Mainnet",
       chainId: "1"
     },
     {
-      url : `https://ropsten.infura.io/v3/${process.env.INFRUA_KEY}`,
+      url : `https://ropsten.infura.io/v3/624bfd9b2a084cd39ca8e1f50d79f56e`,
       name: "Remote Ropsten",
       chainId: "3"
     },
     {
-      url : `https://rinkeby.infura.io/v3/${process.env.INFRUA_KEY}`,
+      url : `https://rinkeby.infura.io/v3/624bfd9b2a084cd39ca8e1f50d79f56e`,
       name: "Remote Rinkeby",
       chainId: "4"
     },
     {
-      url : `https://kovan.infura.io/v3/${process.env.INFRUA_KEY}`,
+      url : `https://kovan.infura.io/v3/624bfd9b2a084cd39ca8e1f50d79f56e`,
       name: "Remote Kovan",
       chainId: "42"
     },
