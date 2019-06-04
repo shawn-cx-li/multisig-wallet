@@ -1,32 +1,42 @@
 require('dotenv').config()
-const PrivateKeyProvider = require("truffle-privatekey-provider");
+const HDWalletProvider = require("truffle-hdwallet-provider");
 
-const deploymentProvider = () => {
-  if (process.env.NODE_ENV === 'prod') {
-    const privKey = process.env.MAINNET_DEPLOY_KEY
-    return new PrivateKeyProvider(privKey, `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`)
-  } else {
-    const privKey = process.env.ROPSTEN_DEPLOY_KEY
-    console.log(process.env)
-    return new PrivateKeyProvider(privKey, `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`)
+const getProvider = (network) => {
+  switch (network) {
+    case "mainnet":
+      return new HDWalletProvider(process.env.MAINNET_MNEMONIC, `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`)
+    case "ropsten":
+      return new HDWalletProvider(process.env.ROPSTEN_MNEMONIC, `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`)
   }
-
 }
 
-// const privKeyrinkeby = 'B6F83638682C26058E058D1A1E1535734EE95DD18EA7359A00934AE2765BE21E'
+const solcStable = {
+  version: '0.4.15',
+};
+
+const solcNightly = {
+  version: 'nightly',
+  docker: true,
+};
+
+const useSolcNightly = process.env.SOLC_NIGHTLY === 'true';
+
 module.exports = {
   networks: {
-    development: {
-      provider: deploymentProvider(),
+    mainnet: {
+      provider: getProvider("mainnet"),
+      gasPrice: 10 * 10 ** 9, // 10 gwei,
+      gas: 4712388,
+      network_id: "1",
+    },
+    ropsten: {
+      provider: getProvider("ropsten"),
       gasPrice: 5 * 10 ** 9, // 5 gwei,
       gas: 4712388,
-      network_id: "*",
+      network_id: "3",
     },
   },
-  // solc: {
-  //   optimizer: {
-  //     enabled: true,
-  //     runs: 200
-  //   }
-  // }
+  compilers: {
+    solc: useSolcNightly ? solcNightly : solcStable,
+  },
 };
