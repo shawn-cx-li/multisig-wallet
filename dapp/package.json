@@ -83,7 +83,7 @@
     "json-rpc-error": "2.0.0",
     "ledger-wallet-provider": "git+https://github.com/denisgranha/ledger-wallet-provider.git#v1.15.0",
     "ledgerco": "^1.2.1",
-    "moment": "2.17.0",
+    "moment": "2.29.2",
     "ngclipboard": "1.1.1",
     "node-hid": "^0.7.3",
     "spinkit": "1.2.5",
